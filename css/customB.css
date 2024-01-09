@@ -1,0 +1,123 @@
+:root {
+    --background: #D8E3FA;
+    --gray: #EAEAEC;
+    --primary: #29283F;
+    --primary-violet: #7370F4;
+    --white: #FFFFFF;
+    --orange-color: #fa8e3f;
+   
+    --secondary: #1D1D1D;
+    
+}
+
+body {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 24px;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    gap: 1rem;
+    background-color: var(--white);
+    width: 100%;
+    max-width: clamp(320px, 70vw, 740px);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    height: fit-content;
+}
+.background{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.addr-book-top .btn{
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 3px;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    background-color: var(--orange-color);
+    -webkit-box-shadow: 0 2px 0 0 #bd5305;
+            box-shadow: 0 2px 0 0 #bd5305;
+}
+
+.addr-book-top .btn:hover{
+    -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+            transform: translateY(1px);
+    -webkit-box-shadow: 0 1px 0 0 #bd5305;
+            box-shadow: 0 1px 0 0 #bd5305;;
+}
+
+
+/*? input wrapper */
+.input__wrapper {
+    position: relative;
+    padding: 15px 0 0;
+    margin-bottom: 0.5rem;
+}
+
+.input__field {
+    font-size: 1.5rem;
+    color: var(--text);
+    padding: 6px 0px;
+    padding-right: 32px;
+    padding-bottom: 8px;
+    line-height: 2rem;
+    height: 2rem;
+    outline: 0px;
+    border: 0px;
+    width: 100%;
+    vertical-align: middle;
+    padding-bottom: 0.7rem;
+    border-bottom: 3px solid var(--secondary);
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.input__field::placeholder {
+    color: transparent;
+}
+
+.input__label {
+    user-select: none;
+}
+
+.input__field:placeholder-shown~.input__label {
+    cursor: text;
+    color: var(--text);
+    top: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.input__label,
+.input__field:focus~.input__label {
+    position: absolute;
+    top: -0.8rem;
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.input__field:focus~.input__label {
+    color: var(--primary);
+}
+
+.input__field:focus {
+    border-bottom: 3px solid var(--primary);
+}
